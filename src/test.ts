@@ -1,3 +1,3 @@
-const a = '!23'
+const a = '123'
 
 export default a
