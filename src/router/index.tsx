@@ -9,8 +9,6 @@ import List from '@/pages/manage/List'
 import Trash from '@/pages/manage/Trash'
 import Star from '@/pages/manage/Star'
 import QuestionLayout from '@/layouts/QuestionLayout'
-import Edit from '@/pages/question/Edit'
-import Stat from '@/pages/question/Stat'
 
 export const router: RouteObject[] = [
   {
@@ -59,11 +57,15 @@ export const router: RouteObject[] = [
     children: [
       {
         path: 'edit/:id',
-        Component: Edit,
+        lazy: {
+          Component: async () => (await import('@/pages/question/Edit')).default,
+        },
       },
       {
         path: 'stat/:id', // statistic 统计
-        Component: Stat,
+        lazy: {
+          Component: async () => (await import('@/pages/question/Stat')).default,
+        },
       },
     ],
   },
