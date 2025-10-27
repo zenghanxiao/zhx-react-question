@@ -1,6 +1,6 @@
 import { Radio, Typography } from 'antd'
 import { QuestionRadioDefaultProps, type QuestionRadioPropsType } from './interface'
-import type React from 'react'
+import React from 'react'
 import { type FC } from 'react'
 
 const { Paragraph } = Typography

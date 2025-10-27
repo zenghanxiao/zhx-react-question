@@ -1,10 +1,10 @@
-import type { FC } from 'react'
+import React from 'react'
 import { Typography } from 'antd'
 import { type QuestionParagraphPropsType, QuestionParagraphDefaultProps } from './interface'
 
 const { Paragraph } = Typography
 
-const Component: FC<QuestionParagraphPropsType> = (props: QuestionParagraphPropsType) => {
+const Component: React.FC<QuestionParagraphPropsType> = (props: QuestionParagraphPropsType) => {
   const { text = '', isCenter = false } = { ...QuestionParagraphDefaultProps, ...props }
 
   // 尽量不要使用 dangerouslySetInnerHTML ，不安全
